@@ -63,8 +63,10 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git docker docker-compose docker-machine zsh-completions zsh-autosuggestions
+  git docker docker-compose docker-machine zsh-autosuggestions
 )
+
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 autoload -U compinit && compinit
 

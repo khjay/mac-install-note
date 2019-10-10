@@ -9,10 +9,10 @@ install: ## Initial Mac Environments
 	brew install zsh-completion brew-cask-completion zsh-syntax-highlighting
 
 	# Install Development Environments
-	brew install git ansible composer docker go htop pipenv python telnet terraform tree unzip wget yarn
+	brew install git ansible composer docker docker-compose go htop pipenv python telnet terraform tree unzip wget yarn
 
 	# Install GUI tools 
-	brew cask install docker google-chrome notion postman sequel-pro skype slack telegram tunnelblick visual-studio-code iterm2 virtualbox
+	brew cask install docker google-chrome notion postman sequel-pro skype slack telegram tunnelblick visual-studio-code iterm2 fork google-cloud-sdk virtualbox
 	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 	# Install Fonts
@@ -26,6 +26,7 @@ install: ## Initial Mac Environments
 	# Install ZSH Custom Plugins
 	git clone https://github.com/zsh-users/zsh-autosuggestions $(HOME)/.oh-my-zsh/custom/plugins/autosuggestions
 	rm -f ~/.zcompdump; compinit
+	chmod go-w '/usr/local/share'
 	source $(HOME)/.zshrc
 
 	# Install vscode plugins
@@ -50,6 +51,8 @@ install: ## Initial Mac Environments
 	code --install-extension pnp.polacode
 	code --install-extension Tyriar.sort-lines
 	code --install-extension wholroyd.jinja
+
+	@echo "\nComplete! Please restart your iterm2."
 
 .PHONY: help
 
