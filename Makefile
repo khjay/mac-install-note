@@ -51,9 +51,6 @@ install: ## Initial Mac Environments
 	code --install-extension Tyriar.sort-lines
 	code --install-extension wholroyd.jinja
 
-test:
-	git clone https://github.com/zsh-users/zsh-autosuggestions $(HOME)/.oh-my-zsh/custom/plugins/autosuggestions
-
 .PHONY: help
 
 help:
