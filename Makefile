@@ -1,7 +1,7 @@
 all: help
 
 install: ## Initial Mac Environments
-	Install Package Management Tool
+	# Install Package Management Tool
 	xcode-select --install
 	/usr/bin/ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
